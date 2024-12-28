@@ -31,7 +31,7 @@ To set up the project locally, follow these steps:
 3. Open the `index.html` file in your browser to view the application locally.
 
 ## Deployment
-Lumina is deployed on **Vercel**. You can access the live version [here](https://your-vercel-deployment-link). 
+Lumina is deployed on **Vercel**. You can access the live version [here](https://lumina-cyan.vercel.app/). 
 
 ## Technologies Used
 - **HTML5**
@@ -62,7 +62,7 @@ This project is licensed under the [MIT License](LICENSE).
 ## Contact
 For any questions, feedback, or suggestions, feel free to reach out:
 - **Author**: Abhay-hack
-- **GitHub Repository**: [Lumina](https://github.com/Abhay-hack/Lumina)
+- **LinkedIn**: [Linkedin](https://www.linkedin.com/in/abhay-gupta-1257b6248/)
 
 ---
 
