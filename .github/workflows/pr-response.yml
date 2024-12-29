@@ -30,14 +30,14 @@ jobs:
               "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments";
           fi
 
-      # Step 2: Add contributor when PR is merged
+      # Step 2: Add Contributor on PR Merge
       - name: Add Contributor on PR Merge
         if: github.event.pull_request.merged == true  # Only run if PR is merged
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           contributor=${{ github.event.pull_request.user.login }}  # Get the PR author's username
-          # Add the contributor using All Contributors CLI
+          # Trigger the All Contributors bot to add the user as a contributor
           curl -X POST \
             -H "Authorization: Bearer $GITHUB_TOKEN" \
             -H "Accept: application/vnd.github.v3+json" \
