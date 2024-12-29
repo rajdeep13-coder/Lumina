@@ -1,5 +1,15 @@
 {
-  "contributors": [],
+  "contributors": [
+    {
+      "login": "Abhay-hack",
+      "name": "Abhay Gupta",
+      "avatar_url": "https://avatars.githubusercontent.com/u/111177764?v=4",
+      "profile": "https://github.com/Abhay-hack",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
   "projectName": "Lumina",
   "projectOwner": "Abhay-hack",
   "repoType": "github",
@@ -9,5 +19,7 @@
   ],
   "imageSize": 100,
   "commit": true,
-  "contributorsPerLine": 7
+  "contributorsPerLine": 7,
+  "commitType": "docs",
+  "commitConvention": "angular"
 }
