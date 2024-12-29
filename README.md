@@ -73,7 +73,7 @@ Thanks to these wonderful people for their contributions:
   <tr>
     <td align="center">
       <a href="https://github.com/Abhay-hack">
-        <img src="https://avatars.githubusercontent.com/u/111177764?v=4" width="100px;" alt="" style="border-radius: 50%;"/>
+        <img src="https://avatars.githubusercontent.com/u/111177764?v=4" width="100px;" height="100px;" alt="" style="border-radius: 50%;"/>
         <br /><sub><b>Abhay-hack</b></sub>
       </a>
       <br />
@@ -82,6 +82,7 @@ Thanks to these wonderful people for their contributions:
   </tr>
 </table>
 <!-- ALL-CONTRIBUTORS-LIST:END -->
+
 
 ---
 
