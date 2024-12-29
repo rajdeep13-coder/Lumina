@@ -69,9 +69,19 @@ For any questions, feedback, or suggestions, feel free to reach out:
 Thanks to these wonderful people for their contributions:
 
 <!-- ALL-CONTRIBUTORS-LIST:START -->
-- [Abhay-hack](https://github.com/Abhay-hack) (code)
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/Abhay-hack">
+        <img src="https://avatars.githubusercontent.com/u/111177764?v=4" width="100px;" alt=""/>
+        <br /><sub><b>Abhay-hack</b></sub>
+      </a>
+      <br />
+      <a href="https://github.com/Abhay-hack" title="Code">💻</a>
+    </td>
+  </tr>
+</table>
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-
 
 ---
 
