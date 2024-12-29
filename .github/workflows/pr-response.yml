@@ -2,7 +2,7 @@ name: PR and Issue Response Bot
 
 on:
   pull_request:
-    types: [opened, closed] # Trigger on PR creation and closure
+    types: [opened]
   issues:
     types: [opened]
 
@@ -15,7 +15,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if [ "${{ github.event_name }}" = "pull_request" ] && [ "${{ github.event.action }}" = "opened" ]; then
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
             curl -X POST \
               -H "Authorization: Bearer $GITHUB_TOKEN" \
               -H "Accept: application/vnd.github.v3+json" \
@@ -28,36 +28,3 @@ jobs:
               -d '{"body":"Thank you for opening this issue! We will get back to you shortly."}' \
               "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments";
           fi
-
-  add-contributor:
-    if: github.event.pull_request.merged == true # Only run if the PR is merged
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18 # Use the latest stable version
-
-      - name: Install All Contributors CLI
-        run: npm install -g all-contributors-cli
-
-      - name: Add merged contributor
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          all-contributors add ${{ github.event.pull_request.user.login }} code
-          all-contributors generate
-
-      - name: Commit and push changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "docs: add ${{ github.event.pull_request.user.login }} as a contributor"
-          git push
