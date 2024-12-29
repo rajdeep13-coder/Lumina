@@ -28,3 +28,18 @@ jobs:
               -d '{"body":"Thank you for opening this issue! We will get back to you shortly."}' \
               "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments";
           fi
+
+      - name: Add Contributor (Optional)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            contributor=${{ github.event.pull_request.user.login }};
+          elif [ "${{ github.event_name }}" = "issues" ]; then
+            contributor=${{ github.event.issue.user.login }};
+          fi
+          curl -X POST \
+            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            -d "{\"body\":\"@all-contributors please add $contributor for code\"}" \
+            "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments";
