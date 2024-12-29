@@ -2,7 +2,7 @@ name: PR and Issue Response Bot
 
 on:
   pull_request:
-    types: [opened]
+    types: [opened, closed] # Trigger on PR creation and closure
   issues:
     types: [opened]
 
@@ -15,7 +15,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
+          if [ "${{ github.event_name }}" = "pull_request" ] && [ "${{ github.event.action }}" = "opened" ]; then
             curl -X POST \
               -H "Authorization: Bearer $GITHUB_TOKEN" \
               -H "Accept: application/vnd.github.v3+json" \
@@ -29,17 +29,35 @@ jobs:
               "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments";
           fi
 
-      - name: Add Contributor (Optional)
+  add-contributor:
+    if: github.event.pull_request.merged == true # Only run if the PR is merged
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18 # Use the latest stable version
+
+      - name: Install All Contributors CLI
+        run: npm install -g all-contributors-cli
+
+      - name: Add merged contributor
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            contributor=${{ github.event.pull_request.user.login }};
-          elif [ "${{ github.event_name }}" = "issues" ]; then
-            contributor=${{ github.event.issue.user.login }};
-          fi
-          curl -X POST \
-            -H "Authorization: Bearer $GITHUB_TOKEN" \
-            -H "Accept: application/vnd.github.v3+json" \
-            -d "{\"body\":\"@all-contributors please add $contributor for code\"}" \
-            "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments";
+          all-contributors add ${{ github.event.pull_request.user.login }} code
+          all-contributors generate
+
+      - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "docs: add ${{ github.event.pull_request.user.login }} as a contributor"
+          git push
