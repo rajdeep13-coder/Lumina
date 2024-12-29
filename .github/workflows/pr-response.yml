@@ -2,7 +2,7 @@ name: PR and Issue Response Bot
 
 on:
   pull_request:
-    types: [opened]
+    types: [opened, closed]  # Trigger on both opened and closed PRs
   issues:
     types: [opened]
 
@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Post a comment for PRs and Issues
       - name: Post a comment
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -28,3 +29,17 @@ jobs:
               -d '{"body":"Thank you for opening this issue! We will get back to you shortly."}' \
               "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments";
           fi
+
+      # Step 2: Add contributor when PR is merged
+      - name: Add Contributor on PR Merge
+        if: github.event.pull_request.merged == true  # Only run if PR is merged
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          contributor=${{ github.event.pull_request.user.login }}  # Get the PR author's username
+          # Add the contributor using All Contributors CLI
+          curl -X POST \
+            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            -d "{\"body\":\"@all-contributors please add $contributor for code\"}" \
+            "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments";
