@@ -68,11 +68,10 @@ For any questions, feedback, or suggestions, feel free to reach out:
 ## Contributors ✨
 Thanks to these wonderful people for their contributions:
 
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/username"><img src="https://avatars.githubusercontent.com/username?v=4" width="100px;" alt=""/><br /><sub><b>Username</b></sub></a><br /><a href="#" title="Code">💻</a> <a href="#" title="Docs">📝</a></td>
-  </tr>
-</table>
+<!-- ALL-CONTRIBUTORS-LIST:START -->
+- [Abhay-hack](https://github.com/Abhay-hack) (code)
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
 
 ---
 
