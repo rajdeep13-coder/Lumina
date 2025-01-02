@@ -9,42 +9,76 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <link rel="stylesheet" href="index.css">
+    <style>
+        /* Align submit button to the right */
+        .text-right {
+            text-align: right;
+        }
+
+        /* Card style for the Contact Us section */
+        .contact-card {
+            background-color: rgba(237, 230, 230, 0.674);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: translateY(-50px); /* Move the card upwards */
+            animation: slideIn 0.5s ease-out forwards; /* Apply animation */
+            margin-top: -20rem;
+        }
+
+        /* Hover effect for the submit button */
+        .btn-dark:hover {
+            background-color: white;
+            color: black;
+        }
+
+        /* Animation for sliding in the card */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px); /* Start from below */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(-50px); /* End position */
+            }
+        }
+    </style>
 </head>
 <body>
-    <head>
-        <div id="main">
-            <div id="home">
-                <div id="nav">
-                    <a href="index.html"><img class="icon magnet" src="./image/lumina1.png" alt=""></a>
-                    <div id="right">
-                        <a href="jobs.html">Jobs</a>
-                        <a href="internships.html">Internships</a>
-                        <a href="mentorship.html">Mentorships</a>
-                        <a href="login.html" class="login-btn magnet">Login</a>
-                        <!--
-                        <i class="ri-user-3-line magnet"></i>
-                    -->
-                    </div>
+    <div id="main">
+        <div id="home">
+            <div id="nav">
+                <a href="index.html"><img class="icon magnet" src="./image/lumina1.png" alt=""></a>
+                <div id="right">
+                    <a href="jobs.html">Jobs</a>
+                    <a href="internships.html">Internships</a>
+                    <a href="mentorship.html">Mentorships</a>
+                    <a href="login.html" class="login-btn magnet">Login</a>
                 </div>
-              
-    </head>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="mb-3" style="margin-left: 23rem; margin-right: 23rem;">
+            <div class="contact-card">
+                <h1>Contact Us</h1>
+                <form action="#" onsubmit="return handleSubmit(event)">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="name" class="form-control" id="name" placeholder="Enter your name here" required>
+                    <label for="email-address" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email-address" placeholder="Enter your email-address here" required>
+                    <label for="message" class="form-label" aria-placeholder="write your message here">Message</label>
+                    <textarea class="form-control" id="message" rows="3"></textarea>
+                    <div class="text-right">
+                        <button class="btn btn-dark mt-3">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
     
-    <div class="mb-3"style="margin-left: 3rem; margin-right: 3rem;" >
-        <h1>Contact Us</h1>
-        <form action="#" onsubmit="return handleSubmit(event)">
-        <label for="name" class="form-label">Name</label>
-        <input type="name" class="form-control" id="name" placeholder="Enter your name here" required>
-        <label for="email-address" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="email-address" placeholder="Enter your email-address here" required>
-      </div>
-      <div class="mb-3" style="margin-left: 3rem; margin-right: 3rem;">
-        <label for="message" class="form-label" aria-placeholder="write your message here">Message</label>
-        <textarea class="form-control" id="message" rows="3"></textarea>
-        <button class="submit ">Submit</button>
-    </form>
-      </div>
-    
-      <footer>
+    <footer>
         <div class="container">
             <div class="grid-container">
                 <div class="grid-item">
@@ -67,7 +101,7 @@
             </div>
     
             <div class="social-media">
-                <a href="">Instagram</a> | 
+                <a href="#">Instagram</a> | 
                 <a href="#">Facebook</a> | 
                 <a href="#">LinkedIn</a>
             </div>
@@ -77,23 +111,20 @@
                 Copyright © 2024-25 All Rights Reserved by Lumina
 
                 <p>
-                    LUMINA - India's Most Interesting Jobs & Internships Platform. Our initiative is to provide various opportunities at single platform offering AI-driven match making, individual counselling & guidance sessions in a very interesting & easy manner to remember with help of relatable things. 
-
+                    LUMINA - India's Most Interesting Jobs & Internships Platform. Our initiative is to provide various opportunities at a single platform offering AI-driven matchmaking, individual counselling & guidance sessions in a very interesting & easy manner to remember with help of relatable things. 
                 </p>
             </div>
         </div>
-    </div>
-      </footer>
-      <script>
+    </footer>
+    <script>
         function handleSubmit(event) {
             event.preventDefault(); // Prevent the form from submitting
             const name = document.getElementById('name').value;
-            const email_address= document.getElementById('email-address').value;
+            const email_address = document.getElementById('email-address').value;
             
             if (name && email_address) {
-                alert('Submit successfully!');
-            } 
-            else {
+                alert('Submitted successfully!');
+            } else {
                 alert('Please enter your name and email-address.');
             }
         }
