@@ -110,7 +110,7 @@ html, body {
 
 .headings {
     display: flex ;
-    gap: 40px;
+    gap: 1.5vw;
 }
 
 .f1{
