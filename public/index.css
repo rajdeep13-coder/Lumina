@@ -239,6 +239,7 @@ html, body {
 #dev {
     width: 100%;
     padding: 5vw 10vw;
+    
 }
 
 #dev h1 {
@@ -259,7 +260,8 @@ html, body {
     margin-top: 2vw;
     letter-spacing: -.5px;
     width: 60%;
-    color:rgb(52, 32, 32)
+    color:rgb(52, 32, 32);
+    
 }
 
 #slides {
@@ -414,9 +416,21 @@ html, body {
 }
 
 .faq-text{
-    text-align: center;
-    margin: 1.5vw;
-}
+    
+        color: transparent;
+        -webkit-text-stroke: 1px #000;
+        font-size: 3.8vw;
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: -3px;
+        margin-top: 3vw;
+        margin-bottom:2vw;
+    }
+    
+    .faq-text:hover {
+        color: #000;
+    
+    }
 
 .faq-section {
     margin: auto;
