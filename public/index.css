@@ -242,17 +242,24 @@ html, body {
 }
 
 #dev h1 {
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
     font-size: 3.8vw;
-    font-weight: 400;
-    width: 60%;
+    font-weight: 900;
     line-height: 1;
+    letter-spacing: -3px;
+    margin-top: 2vw;
 }
 
+#dev h1:hover {
+    color: #000;
+}
 #dev p {
     font-size: 1.5vw;
-    margin-top: 3vw;
+    margin-top: 2vw;
     letter-spacing: -.5px;
     width: 60%;
+    color:rgb(52, 32, 32)
 }
 
 #slides {
