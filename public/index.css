@@ -99,7 +99,7 @@ html, body {
 
 #home #homemain {
     width: 100%;
-    padding: 10vw 10vw;
+    padding: 5vw 10vw 2vw 10vw;
 }
 
 #homemain h1 {
@@ -110,7 +110,7 @@ html, body {
 
 .headings {
     display: flex ;
-    gap: 1.5vw;
+    gap: 1.5vw; /*responsive*/
 }
 
 .f1{
@@ -132,7 +132,7 @@ html, body {
 }
 
 #homelast {
-    padding: 5vw 10vw;
+    padding: 0.5vw 10vw;
 }
 
 #homelast p {
