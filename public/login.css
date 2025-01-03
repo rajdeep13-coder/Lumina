@@ -20,7 +20,7 @@ html{
 }
 body{
   min-height: 100vh;
-  background-image: url(../image/10299985.jpg);
+  background-image: url(./image/10299985.jpg);
   background-size: contain;
   background-position: right;
   overflow: hidden;
@@ -28,7 +28,7 @@ body{
 .car{
     height: auto;
     width: 50%;
-    background-image: url(../image/10299985.jpg);
+    background-image: url(./image/10299985.jpg);
     background-size: contain;
 
 }
@@ -144,4 +144,18 @@ form div.incorrect input{
 }
 #error-message{
   color:#f06272;
+}
+.password-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
 }
