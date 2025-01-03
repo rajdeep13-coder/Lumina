@@ -13,6 +13,7 @@ html, body {
 
 .container {
     padding: 20px;
+    overflow:visible;
 }
 
 #nav {
@@ -84,6 +85,9 @@ html, body {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    position: relative;
+    min-height: 250px;
+    padding-bottom: 70px;
 }
 
 .internship-listing:hover {
@@ -105,20 +109,26 @@ html, body {
 }
 
 .apply-button {
-    display: inline-block;
+    position: absolute;
+    bottom: 20px;
+    left: 25px;
+    right: 25px;
+    display: block;
     padding: 10px 20px;
     background-color: #000000;
     color: #fff;
     text-decoration: none;
     border-radius: 25px;
-    margin-top: 15px;
     transition: all 0.3s ease;
+    text-align: center;
+    z-index: 1;
 }
 
 .apply-button:hover {
     background-color: #ffffff;
     color: #000000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 1; 
 }
 
 .post-job-container {
