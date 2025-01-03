@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "averta cy w10";
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     box-sizing: border-box;
 }
 
@@ -55,7 +55,14 @@ html, body {
     color: black;
     font-size: 0.8rem;
     letter-spacing: -1px;
+    transition: font-size 0.3s ;
 }
+#nav a:hover{
+    font-size: 2vw;
+}
+
+
+
 @media (min-width: 768px) {
     #nav {
         flex-direction: row;
@@ -99,7 +106,7 @@ html, body {
 
 #home #homemain {
     width: 100%;
-    padding: 10vw 10vw;
+    padding: 12vw 10vw;
 }
 
 #homemain h1 {
@@ -110,7 +117,7 @@ html, body {
 
 .headings {
     display: flex ;
-    gap: 40px;
+    gap: 1.5vw; /*responsive*/
 }
 
 .f1{
@@ -132,7 +139,7 @@ html, body {
 }
 
 #homelast {
-    padding: 5vw 10vw;
+    padding: 0.5vw 10vw;
 }
 
 #homelast p {
@@ -239,20 +246,29 @@ html, body {
 #dev {
     width: 100%;
     padding: 5vw 10vw;
+    
 }
 
 #dev h1 {
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
     font-size: 3.8vw;
-    font-weight: 400;
-    width: 60%;
+    font-weight: 900;
     line-height: 1;
+    letter-spacing: -3px;
+    margin-top: 2vw;
 }
 
+#dev h1:hover {
+    color: #000;
+}
 #dev p {
     font-size: 1.5vw;
-    margin-top: 3vw;
+    margin-top: 2vw;
     letter-spacing: -.5px;
     width: 60%;
+    color:rgb(52, 32, 32);
+    
 }
 
 #slides {
@@ -375,7 +391,9 @@ html, body {
 }
 
 .like {
-    font-family: AvertaCY-Bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-weight: 200;
     font-size: 1.5vw;
     flex: 1;
     display: flex;
@@ -405,9 +423,21 @@ html, body {
 }
 
 .faq-text{
-    text-align: center;
-    margin: 1.5vw;
-}
+    
+        color: transparent;
+        -webkit-text-stroke: 1px #000;
+        font-size: 3.8vw;
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: -3px;
+        margin-top: 3vw;
+        margin-bottom:2vw;
+    }
+    
+    .faq-text:hover {
+        color: #000;
+    
+    }
 
 .faq-section {
     margin: auto;
