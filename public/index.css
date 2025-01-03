@@ -55,7 +55,14 @@ html, body {
     color: black;
     font-size: 0.8rem;
     letter-spacing: -1px;
+    transition: font-size 0.3s ;
 }
+#nav a:hover{
+    font-size: 2vw;
+}
+
+
+
 @media (min-width: 768px) {
     #nav {
         flex-direction: row;
