@@ -433,6 +433,10 @@ html, body {
     background-color: #f1f1f1;
 }
 
+.faq-question:hover + .faq-answer {
+    display: block;
+}
+
 .faq-answer {
     padding: 0 18px;
     display: none;
@@ -445,6 +449,8 @@ html, body {
     padding: 18px;
     margin: 0;
 }
+
+ 
 
 /*-------------Contact Us---------------*/
 .container {
