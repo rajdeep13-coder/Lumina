@@ -14,6 +14,7 @@
     <div id="nav">
         <a href="index.html"><img class="magnet" src="./image/lumina1.png" alt=""></a>
         <div id="right">
+            <a href="index.html">Home</a>
             <a href="jobs.html">Jobs</a>
             <a href="internships.html">Internships</a>
             <a href="mentorship.html">Mentorships</a>
@@ -21,26 +22,54 @@
             <a href="login.html" class="login-btn magnet">Login</a>
         </div>
     </div>
+
     <div class="container">
         <h1>Available Internships</h1>
-
-        <!-- Example Internship Listing -->
-        <div class="internship-listing">
-            <h2>Web Development Intern</h2>
-            <p>Company: XYZ Tech</p>
-            <p>Location: Remote</p>
-            <p>Internship Description: Learn and work on exciting web development projects with our expert team.</p>
-            <a href="#" class="apply-button">Apply Now</a>
+        <div class="internships-grid">
+            <div class="internship-listing">
+                <h2>Web Development Intern</h2>
+                <p>Company: XYZ Tech</p>
+                <p>Location: Remote</p>
+                <p>Internship Description: Learn and work on exciting web development projects with our expert team.</p>
+                <a href="#" class="apply-button">Apply Now</a>
+            </div>
+            <div class="internship-listing">
+                <h2>Graphic Design Intern</h2>
+                <p>Company: ABC Creative</p>
+                <p>Location: San Francisco, CA</p>
+                <p>Internship Description: Work alongside senior designers on branding and UI/UX projects.</p>
+                <a href="#" class="apply-button">Apply Now</a>
+            </div>
+            <div class="internship-listing">
+                <h2>Data Analyst Intern</h2>
+                <p>Company: Data Insights</p>
+                <p>Location: Remote</p>
+                <p>Internship Description: Assist in analyzing and visualizing complex datasets.</p>
+                <a href="#" class="apply-button">Apply Now</a>
+            </div>
+            <div class="internship-listing">
+                <h2>Marketing Intern</h2>
+                <p>Company: Market Pro</p>
+                <p>Location: New York, NY</p>
+                <p>Internship Description: Engage in creative marketing campaigns and digital outreach programs.</p>
+                <a href="#" class="apply-button">Apply Now</a>
+            </div>
+            <div class="internship-listing">
+                <h2>AI Research Intern</h2>
+                <p>Company: AI Pioneers</p>
+                <p>Location: Remote</p>
+                <p>Internship Description: Contribute to cutting-edge research in artificial intelligence and machine learning.</p>
+                <a href="#" class="apply-button">Apply Now</a>
+            </div>
+            <div class="internship-listing">
+                <h2>Content Writer Intern</h2>
+                <p>Company: Wordsmith Co.</p>
+                <p>Location: Remote</p>
+                <p>Internship Description: Create compelling content for blogs, articles, and marketing materials.</p>
+                <a href="#" class="apply-button">Apply Now</a>
+            </div>
         </div>
-
-        <div class="internship-listing">
-            <h2>Graphic Design Intern</h2>
-            <p>Company: ABC Creative</p>
-            <p>Location: San Francisco, CA</p>
-            <p>Internship Description: Work alongside senior designers on branding and UI/UX projects.</p>
-            <a href="#" class="apply-button">Apply Now</a>
-        </div>
-        <div class="post-job-container"></div>
+        <div class="post-job-container">
             <button class="post-job-button">
                 <i class="fas fa-briefcase"></i> Post an Internship
             </button>
@@ -49,6 +78,7 @@
             </div>
         </div>
     </div>
+
     <div class="container">
         <div class="grid-container">
             <div class="grid-item">
@@ -85,16 +115,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
-    <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+    <script src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-  if (typeof Shery !== 'undefined') {
-      Shery.mouseFollower();
-      Shery.makeMagnet(".magnet");
-  } else {
-      console.error("Shery is not defined.");
-  }
-});
+            if (typeof Shery !== 'undefined') {
+                Shery.mouseFollower();
+                Shery.makeMagnet(".magnet");
+            } else {
+                console.error("Shery is not defined.");
+            }
+        });
     </script>
 </body>
 </html>
