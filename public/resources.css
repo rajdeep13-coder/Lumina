@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "averta cy w10";
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(247, 247, 178) !important;
+}
+
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 50px;
+    background-color: #f7e2b1ea;
+}
+
+#nav img {
+    width: 100px;
+}
+
+#nav #right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#nav a {
+    text-decoration: none;
+    font-weight: 400;
+    color: #000;
+    font-size: 0.8rem;
+    letter-spacing: -1px;
+}
+
+.resources{
+    margin: 2%;
+    margin-bottom: -8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+.practice{
+    display: block;
+    width: 100vw;
+    margin-left: 45%;
+    margin-top: 5%;
+}
+
+.container{
+    margin: 2%;
+    padding: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+    flex-wrap: wrap;
+}
+
+.card1, .card2, .card3, .card4, .card5, .card6{
+    margin-top: 5% !important;
+    margin: 0;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    height:  300px !important;
+    border: 2px solid black;
+    border-radius: 15px;
+    height: 200px;
+    background-color: #f0ebd5;
+}
+
+.card1 img{
+    margin: 4%;
+    width: 50%;
+    height: 50%;
+}
+
+.card2 img{
+    margin: 4%;
+    width: 50%;
+    height: 49%;
+}
+
+.card3 img, .card4 img, .card5 img, .card6 img{
+    margin: 4%;
+    width: 45%;
+    height: 45%;
+}
+
+.card1 a, .card2 a, .card3 a, .card4 a, .card5 a, .card6 a{
+    text-decoration: none;
+    color: rgb(94, 21, 163);
+    font-weight: 600;
+}
+
+#nav i {
+    font-weight: 100px;
+    font-size: 1rem;
+}
+
+#right a.login-btn {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border-radius: 25px;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#right a.login-btn:hover {
+    color: black;
+    background-color: #ffffff; 
+}
+
+
+@media (min-width: 768px) {
+    #nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 30px 50px;
+    }
+
+    #nav img {
+        width: 100px;
+    }
+
+    #nav a {
+        font-size: 1.5vw;
+    }
+    #nav i {
+        font-size: 1.5vw;
+    }
+
+}
