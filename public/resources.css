@@ -5,10 +5,10 @@
     box-sizing: border-box;
 }
 
-html,body{
+body{
+    height: 100vh;
     width: 100%;
-    height: 100%;
-    background-color: rgb(247, 247, 178);
+    background-color: rgb(247, 247, 178) !important;
 }
 
 #nav {
@@ -62,7 +62,6 @@ html,body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 50vh;
     gap: 8%;
     flex-wrap: wrap;
 }
