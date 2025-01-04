@@ -49,6 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!firstname) {
       errors.push('Firstname is required');
+    }else if (!validateName(firstname)) {
+      errors.push('Firstname must contain only letters, spaces, or hyphens');
     }
 
     if (!email) {
@@ -92,6 +94,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Simple email regex for validation
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()[\]\\.,;:\s@"]+\.)+[^<>()[\]\\.,;:\s@"]{2,})$/i;
     return re.test(String(email).toLowerCase());
+  }
+  function validateName(name) {
+    // Name should contain only letters, spaces, or hyphens
+    const nameRe = /^[A-Za-z\s-]+$/;
+    return nameRe.test(name);
   }
 
   function highlightErrors(inputIds, errors) {
