@@ -536,3 +536,30 @@ html, body {
 .social-media a:hover {
     color: #000;
 }
+/* Add floating animation */
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+#dev {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+#slides .slide {
+    animation: fadeInUp 1s ease-in-out, floating 3s ease-in-out infinite;
+    margin: 1rem;
+    padding: 1rem;
+    transition: transform 0.3s;
+}
+
+#slides .slide:hover {
+    transform: translateY(-15px); /* Slightly increased the hover effect */
+}
+
+/* Maintain original styles */
+.slide {
+    display: inline-block;
+    width: calc(33.333% - 20px);
+    margin-right: 10px;
+}

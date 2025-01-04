@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(247, 247, 178);
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+
+.homemain {
+    width: 100%;
+   
+}
+
+.container {
+    align-self: center;
+    text-align: left;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    margin-top: -20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    gap: 10px;
+    font-size: 2.7rem;
+    margin:30px 10px;
+}
+
+
+
+.event {
+    background-color:  rgba(237, 230, 230, 0.674);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    align-content: left;
+    text-align: left;
+    
+   
+}
+
+.event-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.event:last-child {
+    border-bottom: none;
+}
+
+.event h2 {
+    color: #333;
+}
+
+.event p {
+    color: #666;
+    font-size: 2rem;
+}
+
+.event-date {
+    font-size: 1.5rem;
+    color: #999;
+}
+
+.register-button {
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.register-button:hover {
+    background-color: #0056b3;
+}
+
+.add-button {
+    display: inline-block;
+    align-self: center;
+    padding: 20px 30px;
+    margin-top: 30px;
+    background-color: #0e5f0e;
+    font-size: 1.4rem;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.add-button:hover {
+    background-color: #0056b3;
+}
