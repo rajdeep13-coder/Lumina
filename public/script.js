@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
       Shery.hoverWithMediaCircle(".hvr", {
         videos: ["/image/0.mp4", "/image/2.mp4", "/image/3.mp4"],
       });
-
+    
       gsap.to(".fleftelm", {
           scrollTrigger: {
               trigger: "#fimages",
