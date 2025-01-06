@@ -21,8 +21,13 @@ html, body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 30px 50px;
+    padding: 2px 50px;
     background-color: #f7e2b1ea;
+}
+
+.container h1{
+    margin: 2rem 0;
+    font-size: 3rem;
 }
 
 #nav img {
@@ -47,7 +52,7 @@ html, body {
     #nav {
         flex-direction: row;
         justify-content: space-between;
-        padding: 30px 50px;
+        padding: 1px 20px;
     }
     #nav img {
         width: 100px;
@@ -80,6 +85,13 @@ html, body {
 }
 
 .internship-listing {
+    background-color:  rgba(237, 230, 230, 0.674);
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    line-height: 31px;
     background-color: rgba(237, 230, 230, 0.674);
     padding: 25px;
     border-radius: 10px;
@@ -147,6 +159,7 @@ html, body {
     display: inline-flex;
     align-items: center;
     font-weight: bold;
+    margin-top: 2rem;
     transition: all 0.3s ease;
 }
 
@@ -542,4 +555,8 @@ html, body {
 }
 .social-media a:hover {
     color: #000;
+}
+
+.quote{
+    margin-top: 1rem;
 }
