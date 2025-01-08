@@ -61,8 +61,6 @@ html, body {
     font-size: 2vw;
 }
 
-
-
 @media (min-width: 768px) {
     #nav {
         flex-direction: row;
