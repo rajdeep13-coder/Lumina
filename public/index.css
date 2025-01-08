@@ -106,7 +106,8 @@ html, body {
 
 #home #homemain {
     width: 100%;
-    padding: 12vw 10vw;
+    padding: 8vw 10vw;
+    text-align: center;
 }
 
 #homemain h1 {
@@ -117,7 +118,11 @@ html, body {
 
 .headings {
     display: flex ;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 1.5vw; /*responsive*/
+    margin: 15px 0;
 }
 
 .f1{
