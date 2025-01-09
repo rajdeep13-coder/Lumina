@@ -106,23 +106,28 @@ html, body {
 
 #home #homemain {
     width: 100%;
-<<<<<<< HEAD
     padding: 12vw 10vw;
-=======
     padding: 5vw 10vw;
     text-align: center;
->>>>>>> 78e6abe (Fixes  Restructing the Landing Page UI and CSS)
 }
 
 #homemain h1 {
+ 
     font-weight: 500;
     letter-spacing: -.1vw;
     font-size: 1.34vw;
 }
 
+#homemain .unlock {
+    margin-top: 2rem;
+}
+
 .headings {
     display: flex ;
     gap: 1.5vw; /*responsive*/
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .f1{
