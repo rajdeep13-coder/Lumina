@@ -106,6 +106,8 @@ html, body {
 
 #home #homemain {
     width: 100%;
+    padding: 5vw 10vw;
+    text-align: center;
     padding: 12vw 10vw;
     padding: 5vw 10vw;
     text-align: center;
@@ -124,10 +126,10 @@ html, body {
 
 .headings {
     display: flex ;
-    gap: 1.5vw; /*responsive*/
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    gap: 1.5vw; /*responsive*/
 }
 
 .f1{
