@@ -47,8 +47,13 @@ html, body {
     display: flex;
     align-items: center;
     gap: 40px;
-}
+    font-size:50px;
 
+}
+#nav #right:hover {
+      transition:cubic-bezier(1, 0, 0, 1);
+
+}
 #nav a {
     text-decoration: none;
     font-weight: 400;
@@ -112,6 +117,56 @@ html, body {
     letter-spacing: -.1vw;
     font-size: 1.34vw;
 }
+#slides {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    overflow: hidden;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out, transform 0.5s;
+    perspective: 1000px;
+  }
+  .slide{
+    background: linear-gradient(135deg, pink, #acb6e5);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+   transition: transform 0.5s, box-shadow 0.5s; 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   color: white;
+   font-family: Arial, sans-serif;
+   transform-style: preserve-3d; 
+   animation: float 3s ease-in-out infinte;
+
+  }
+
+  .slide:hover {
+    transform: rotateY(20deg) rotateX(10deg) scale(1.05);
+    box-shadow: 0 8px 20px pink;
+  }
+  @keyframes float{
+    0%{
+        transform:translateY(0);
+    }
+    50% {
+        transform:translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+  }
+
+  .slide img {
+    transition: transform 0.3s ease;
+  }
+
+  .slide:hover img {
+    transform: scale(1.1);
+  }
+  
+
 
 .headings {
     display: flex ;
@@ -489,6 +544,9 @@ html, body {
 }
 .vertical-logo {
     font-size: 2.5vw;
+    font-family:'Times New Roman', Times, serif;
+    color: red;
+    font-size:40px;
 }
 .grid-container {
     margin:4vw ;
@@ -531,8 +589,13 @@ html, body {
     color: #333;
     text-decoration: none;
 }
+.social-media:visited{
+    color:pink;
+}
 .social-media a:hover {
-    color: #000;
+    background: pink;
+    color: white;
+    box-shadow: 0 0 30px pink;
 }
 /* Add floating animation */
 @keyframes floating {
