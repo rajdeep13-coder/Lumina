@@ -106,12 +106,20 @@ html, body {
     width: 100%;
     padding: 5vw 10vw;
     text-align: center;
+    padding: 12vw 10vw;
+    padding: 5vw 10vw;
+    text-align: center;
 }
 
 #homemain h1 {
+ 
     font-weight: 500;
     letter-spacing: -.1vw;
     font-size: 1.34vw;
+}
+
+#homemain .unlock {
+    margin-top: 2rem;
 }
 
 .headings {
@@ -120,7 +128,6 @@ html, body {
     justify-content: center;
     align-items: center;
     gap: 1.5vw; /*responsive*/
-    margin: 15px 0;
 }
 
 .f1{
