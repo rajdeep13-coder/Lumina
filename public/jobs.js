@@ -15,6 +15,20 @@ document.addEventListener('DOMContentLoaded', () => {
         form.reset();
         filterJobs(); // Reapply filter with default values
     });
+
+    // Add event listeners to View details buttons
+    document.querySelectorAll('.btn').forEach(button => {
+        button.addEventListener('click', (event) => {
+            // Perform any custom action here if needed
+            // For example, you can check if the URL is valid before navigating
+            const href = button.getAttribute('href');
+            if (href && href !== '#') {
+                window.location.href = href;
+            } else {
+                alert('Invalid URL!');
+            }
+        });
+    });
 });
 
 function selectDropdown(element) {
@@ -34,12 +48,12 @@ function filterJobs() {
     const shift = form.shift.value.toLowerCase();
 
     const jobs = [
-        {company: 'IT Infosy co.', title: 'Senior Web Developer', location: 'mumbai, india', datePosted: '2 days ago', salary: '10k - 20k', jobType: 'part-time', education: 'bachelor\'s degree', shift: 'day shift', image: './image/html.webp'},
-        {company: 'All Media Ltd.', title: 'Qualified Developer', location: 'mumbai, india', datePosted: '2 days ago', salary: '9000', jobType: 'full-time', education: 'master\'s degree', shift: 'flexible shift', image: './image/css3-logo-png-transparent.png'},
-        {company: 'Software Solution', title: 'Javascript Developer', location: 'mumbai, india', datePosted: 'posted today', salary: '10k - 20k', jobType: 'internship', education: 'bachelor\'s degree', shift: 'night shift', image: './image/java.jpg'},
-        {company: 'IT World', title: 'Junior Front-End', location: 'mumbai, india', datePosted: '19 days ago', salary: '40k - 50k', jobType: 'contract', education: 'diploma', shift: 'fixed shift', image: 'https://static.vecteezy.com/system/resources/previews/001/198/090/non_2x/world-png.png'},
-        {company: 'Info Statics', title: 'Junior Assistant', location: 'mumbai, india', datePosted: '2 days ago', salary: '5000', jobType: 'temporary', education: '10th pass', shift: 'flexible shift', image: 'https://th.bing.com/th/id/OIP.iJbuiX_YdBeTqI7wYawlwwHaHa?rs=1&pid=ImgDetMain'},
-        {company: 'Mass Idea', title: 'PHP Developer', location: 'mumbai, india', datePosted: '2 days ago', salary: '50k - 1 lakh', jobType: 'fresher', education: 'bachelor\'s degree', shift: 'day shift', image: './image/php.jpg'}
+        {company: 'IT Infosy co.', title: 'Senior Web Developer', location: 'mumbai, india', datePosted: '2 days ago', salary: '10k - 20k', jobType: 'part-time', education: 'bachelor\'s degree', shift: 'day shift', image: './image/html.webp', link: 'ITinfosy.html'},
+        {company: 'All Media Ltd.', title: 'Qualified Developer', location: 'mumbai, india', datePosted: '2 days ago', salary: '9000', jobType: 'full-time', education: 'master\'s degree', shift: 'flexible shift', image: './image/css3-logo-png-transparent.png', link: 'AllmediaLtd.html'},
+        {company: 'Software Solution', title: 'Javascript Developer', location: 'mumbai, india', datePosted: 'posted today', salary: '10k - 20k', jobType: 'internship', education: 'bachelor\'s degree', shift: 'night shift', image: './image/java.jpg', link: 'softwareSolution.html'},
+        {company: 'IT World', title: 'Junior Front-End', location: 'mumbai, india', datePosted: '19 days ago', salary: '40k - 50k', jobType: 'contract', education: 'diploma', shift: 'fixed shift', image: 'https://static.vecteezy.com/system/resources/previews/001/198/090/non_2x/world-png.png', link: 'ITWorlds.html'},
+        {company: 'Info Statics', title: 'Junior Assistant', location: 'mumbai, india', datePosted: '2 days ago', salary: '5000', jobType: 'temporary', education: '10th pass', shift: 'flexible shift', image: 'https://th.bing.com/th/id/OIP.iJbuiX_YdBeTqI7wYawlwwHaHa?rs=1&pid=ImgDetMain', link: 'InfoStatics.html'},
+        {company: 'Mass Idea', title: 'PHP Developer', location: 'mumbai, india', datePosted: '2 days ago', salary: '50k - 1 lakh', jobType: 'fresher', education: 'bachelor\'s degree', shift: 'day shift', image: './image/php.jpg', link: 'massIdea.html'}
     ];
 
     const filteredJobs = jobs.filter(job => 
@@ -135,10 +149,26 @@ function displayFilteredJobs(jobs) {
                 <p><i class="fas fa-graduation-cap"></i> <span>${job.education}</span></p>
             </div>
             <div class="flex-btn">
-                <a href="#" class="btn">View details</a>
+                <a href="${job.link}" class="btn">View details</a>
                 <button class="far fa-heart"></button>
             </div>
         `;
         jobContainer.appendChild(jobBox);
     });
+    
+  // Add event listeners to the new View details buttons after they are created
+document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', (event) => {
+        handleButtonClick(event, button);
+    });
+});
+
+function handleButtonClick(event, button) {
+    const href = button.getAttribute('href');
+    if (href && href !== '#') {
+        window.location.href = href;
+    } else {
+        alert('Invalid URL!');
+    }
+}
 }
