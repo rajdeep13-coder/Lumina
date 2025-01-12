@@ -10,7 +10,8 @@
     background-color: #000;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
     background-color: rgb(247, 247, 178);
@@ -30,15 +31,17 @@ html, body {
 #nav {
     display: flex;
     align-items: center;
-    background-color:#f7e2b1ea;
+    background-color: #f7e2b1ea;
     justify-content: space-between;
     width: 100%;
     padding: 30px 50px;
     height: 40%;
 }
-.icon{
+
+.icon {
     font-size: medium;
 }
+
 #nav img {
     width: 50%;
 }
@@ -47,22 +50,25 @@ html, body {
     display: flex;
     align-items: center;
     gap: 40px;
-    font-size:50px;
+    font-size: 50px;
 
 }
+
 #nav #right:hover {
-      transition:cubic-bezier(1, 0, 0, 1);
+    transition: cubic-bezier(1, 0, 0, 1);
 
 }
+
 #nav a {
     text-decoration: none;
     font-weight: 400;
     color: black;
     font-size: 0.8rem;
     letter-spacing: -1px;
-    transition: font-size 0.3s ;
+    transition: font-size 0.3s;
 }
-#nav a:hover{
+
+#nav a:hover {
     font-size: 2vw;
 }
 
@@ -80,11 +86,13 @@ html, body {
     #nav a {
         font-size: 1.5vw;
     }
+
     #nav i {
         font-size: 1.5vw;
     }
 
 }
+
 #right a.login-btn {
     padding: 10px 20px;
     background-color: black;
@@ -97,7 +105,7 @@ html, body {
 
 #right a.login-btn:hover {
     color: black;
-    background-color: #ffffff; 
+    background-color: #ffffff;
 }
 
 
@@ -117,6 +125,7 @@ html, body {
     letter-spacing: -.1vw;
     font-size: 1.34vw;
 }
+
 #slides {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
@@ -125,55 +134,60 @@ html, body {
     transform-style: preserve-3d;
     transition: transform 0.6s ease-in-out, transform 0.5s;
     perspective: 1000px;
-  }
-  .slide{
+}
+
+.slide {
     background: linear-gradient(135deg, pink, #acb6e5);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-   transition: transform 0.5s, box-shadow 0.5s; 
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-   color: white;
-   font-family: Arial, sans-serif;
-   transform-style: preserve-3d; 
-   animation: float 3s ease-in-out infinte;
+    transition: transform 0.5s, box-shadow 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    transform-style: preserve-3d;
+    animation: float 3s ease-in-out infinte;
 
-  }
+}
 
-  .slide:hover {
+.slide:hover {
     transform: rotateY(20deg) rotateX(10deg) scale(1.05);
     box-shadow: 0 8px 20px pink;
-  }
-  @keyframes float{
-    0%{
-        transform:translateY(0);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
     }
+
     50% {
-        transform:translateY(-10px);
+        transform: translateY(-10px);
     }
+
     100% {
         transform: translateY(0);
     }
-  }
+}
 
-  .slide img {
+.slide img {
     transition: transform 0.3s ease;
-  }
+}
 
-  .slide:hover img {
+.slide:hover img {
     transform: scale(1.1);
-  }
-  
+}
+
 
 
 .headings {
-    display: flex ;
-    gap: 1.5vw; /*responsive*/
+    display: flex;
+    gap: 1.5vw;
+    /*responsive*/
 }
 
-.f1{
+.f1 {
     font-size: 0.8rem;
     word-spacing: 0.1rem;
 }
@@ -299,7 +313,7 @@ html, body {
 #dev {
     width: 100%;
     padding: 5vw 10vw;
-    
+
 }
 
 #dev h1 {
@@ -315,13 +329,14 @@ html, body {
 #dev h1:hover {
     color: #000;
 }
+
 #dev p {
     font-size: 1.5vw;
     margin-top: 2vw;
     letter-spacing: -.5px;
     width: 60%;
-    color:rgb(52, 32, 32);
-    
+    color: rgb(52, 32, 32);
+
 }
 
 #slides {
@@ -362,13 +377,14 @@ html, body {
     letter-spacing: -.5px;
 }
 
-.li{
+.li {
     text-decoration: none;
     font-weight: 400;
     color: #000;
     font-size: 1.5vw;
     letter-spacing: -1px;
 }
+
 #moving-div {
     margin: 60px auto;
     bottom: 3%;
@@ -420,13 +436,13 @@ html, body {
     z-index: 2;
 }
 
-.quote{
+.quote {
     border-radius: 20px;
     display: flex;
     margin: 0 auto;
     height: auto;
     width: 70%;
-    background-color: rgb(255,253,208);
+    background-color: rgb(255, 253, 208);
     overflow: hidden;
 }
 
@@ -458,39 +474,42 @@ html, body {
 .like h1 {
     padding: 10px;
     text-decoration: none;
-    margin: 0; /* Remove default margin */
+    margin: 0;
+    /* Remove default margin */
     color: #000;
-    font-size: 1.5vw; /* Use rem for responsive font size */
+    font-size: 1.5vw;
+    /* Use rem for responsive font size */
     letter-spacing: -0.5px;
-    text-align: center; /* Center text horizontally */
+    text-align: center;
+    /* Center text horizontally */
 }
 
 
 /*----------------Faqs Page--------------*/
 
-.Faqs{
+.Faqs {
     width: 70%;
     margin: 0 auto;
     padding: 20px;
     text-align: left;
 }
 
-.faq-text{
-    
-        color: transparent;
-        -webkit-text-stroke: 1px #000;
-        font-size: 3.8vw;
-        font-weight: 900;
-        line-height: 1;
-        letter-spacing: -3px;
-        margin-top: 3vw;
-        margin-bottom:2vw;
-    }
-    
-    .faq-text:hover {
-        color: #000;
-    
-    }
+.faq-text {
+
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
+    font-size: 3.8vw;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -3px;
+    margin-top: 3vw;
+    margin-bottom: 2vw;
+}
+
+.faq-text:hover {
+    color: #000;
+
+}
 
 .faq-section {
     margin: auto;
@@ -512,11 +531,12 @@ html, body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.faq-question.active, .faq-question:hover {
+.faq-question.active,
+.faq-question:hover {
     background-color: #f1f1f1;
 }
 
-.faq-question:hover + .faq-answer {
+.faq-question:hover+.faq-answer {
     display: block;
 }
 
@@ -533,7 +553,7 @@ html, body {
     margin: 0;
 }
 
- 
+
 
 /*-------------Contact Us---------------*/
 .container {
@@ -542,14 +562,16 @@ html, body {
     padding: 20px;
     text-align: center;
 }
+
 .vertical-logo {
     font-size: 2.5vw;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     color: red;
-    font-size:40px;
+    font-size: 40px;
 }
+
 .grid-container {
-    margin:4vw ;
+    margin: 4vw;
     height: auto;
     align-items: center;
     width: auto;
@@ -557,50 +579,67 @@ html, body {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
 }
+
 .grid-item {
-    background-color:  rgba(237, 230, 230, 0.674);
+    background-color: rgba(237, 230, 230, 0.674);
     padding: 20px;
     border-radius: 10px;
 }
+
 .grid-item h2 {
     margin-bottom: 20px;
 }
+
 .grid-item a {
     display: block;
     color: #333;
     text-decoration: none;
     margin: 10px 0;
 }
+
 .grid-item a:hover {
     text-decoration: underline;
 }
+
 .footer {
     margin-top: 50px;
     font-size: 12px;
     color: #333;
     font-size: 1rem;
 }
+
 .social-media {
     margin-top: 30px;
 }
+
 .social-media a {
     margin: 0 10px;
     font-size: 18px;
     color: #333;
     text-decoration: none;
 }
-.social-media:visited{
-    color:pink;
+
+.social-media:visited {
+    color: pink;
 }
+
 .social-media a:hover {
     background: pink;
     color: white;
     box-shadow: 0 0 30px pink;
 }
+
 /* Add floating animation */
 @keyframes floating {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 #dev {
@@ -615,7 +654,8 @@ html, body {
 }
 
 #slides .slide:hover {
-    transform: translateY(-15px); /* Slightly increased the hover effect */
+    transform: translateY(-15px);
+    /* Slightly increased the hover effect */
 }
 
 /* Maintain original styles */
