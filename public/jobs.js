@@ -18,16 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add event listeners to View details buttons
     document.querySelectorAll('.btn').forEach(button => {
-        button.addEventListener('click', (event) => {
-            // Perform any custom action here if needed
-            // For example, you can check if the URL is valid before navigating
-            const href = button.getAttribute('href');
-            if (href && href !== '#') {
-                window.location.href = href;
-            } else {
-                alert('Invalid URL!');
-            }
-        });
+        button.addEventListener('click', handleButtonClick);
     });
 });
 
@@ -156,14 +147,14 @@ function displayFilteredJobs(jobs) {
         jobContainer.appendChild(jobBox);
     });
     
-  // Add event listeners to the new View details buttons after they are created
+ // Add event listeners to the new View details buttons after they are created
 document.querySelectorAll('.btn').forEach(button => {
-    button.addEventListener('click', (event) => {
-        handleButtonClick(event, button);
-    });
+    button.addEventListener('click', handleButtonClick);
 });
 
-function handleButtonClick(event, button) {
+function handleButtonClick(event) {
+    event.preventDefault(); // Prevent default action
+    const button = event.currentTarget;
     const href = button.getAttribute('href');
     if (href && href !== '#') {
         window.location.href = href;
