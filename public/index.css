@@ -76,7 +76,7 @@ body {
     #nav {
         flex-direction: row;
         justify-content: space-between;
-        padding: 30px 50px;
+        padding: 10px 50px;
     }
 
     #nav img {
@@ -117,10 +117,15 @@ body {
 
 #home #homemain {
     width: 100%;
+    padding: 5vw 10vw;
+    text-align: center;
     padding: 12vw 10vw;
+    padding: 5vw 10vw;
+    text-align: center;
 }
 
 #homemain h1 {
+ 
     font-weight: 500;
     letter-spacing: -.1vw;
     font-size: 1.34vw;
@@ -181,10 +186,20 @@ body {
 
 
 
+#homemain .unlock {
+    margin-top: 2rem;
+}
+
 .headings {
+
     display: flex;
     gap: 1.5vw;
-    /*responsive*/
+    display: flex ;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vw; 
+
 }
 
 .f1 {
@@ -210,7 +225,8 @@ body {
 }
 
 #homelast p {
-    width: 70%;
+    text-align: center;
+    width: 100%;
     font-size: 1.6vw;
     font-weight: 400;
     letter-spacing: -.08vw;
@@ -313,8 +329,8 @@ body {
 #dev {
     width: 100%;
     padding: 5vw 10vw;
-
-}
+    padding: 5vw 10vw 0;
+}   
 
 #dev h1 {
     color: transparent;
@@ -336,7 +352,9 @@ body {
     letter-spacing: -.5px;
     width: 60%;
     color: rgb(52, 32, 32);
-
+    width: 100%;
+    color:rgb(52, 32, 32);
+    
 }
 
 #slides {
@@ -366,7 +384,7 @@ body {
 }
 
 .slide .tag {
-    width: fit-content;
+    text-align: center;
     padding: 10px 22px;
     margin: 20px 0;
 }
@@ -489,10 +507,11 @@ body {
 
 .Faqs {
     width: 70%;
-    margin: 0 auto;
-    padding: 20px;
+    /* margin: 0 auto; */
+    /* padding: 20px; */
     text-align: left;
 }
+
 
 .faq-text {
 
@@ -511,8 +530,29 @@ body {
 
 }
 
+.faq-text{
+    text-align: center;
+        width: 98vw;
+        color: transparent;
+        -webkit-text-stroke: 1px #000;
+        font-size: 3.8vw;
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: -3px;
+        margin-top: 3vw;
+        margin-bottom:2vw;
+    }
+    
+    .faq-text:hover {
+        color: #000;
+    
+    }
+
+
 .faq-section {
-    margin: auto;
+    /* margin: auto; */
+    width: 98vw;
+    padding: 0 14rem;
 }
 
 .faq-question {
@@ -571,7 +611,9 @@ body {
 }
 
 .grid-container {
+
     margin: 4vw;
+    margin: 4vw 7vw;
     height: auto;
     align-items: center;
     width: auto;
@@ -606,6 +648,11 @@ body {
     font-size: 12px;
     color: #333;
     font-size: 1rem;
+}
+
+.footer p{
+    width: 50%;
+    margin: 1rem auto;
 }
 
 .social-media {
@@ -643,6 +690,7 @@ body {
 }
 
 #dev {
+    text-align: center;
     animation: fadeInUp 1s ease-in-out;
 }
 
