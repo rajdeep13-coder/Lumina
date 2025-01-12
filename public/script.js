@@ -56,3 +56,36 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const slide = document.querySelectorAll(".slide");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    slide.forEach((slide) => {
+      slide.style.opacity = 0;
+      slide.style.transform = 'translateY(20px)';
+      observer.observe(slide);
+    });
+  });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const carouselElement = document.querySelector('#carouselExample');
+    if (carouselElement) {
+      const carousel = new bootstrap.Carousel(carouselElement, {
+        interval: 3000, 
+        ride: 'carousel',
+        pause: 'hover',
+      });
+    }
+  });
+  
