@@ -342,6 +342,15 @@ body{
         margin-top: 3rem;
     }
 
+    @media (max-width: 786px) {
+        .job-container .box-container{
+            display: grid
+            ;
+                grid-template-columns: repeat(auto-fit, 35rem);
+                gap: 4rem;
+        }
+    }
+
 .job-container .box-container .box{
     background-color: rgba(237, 230, 230, 0.674);
     border-radius: .5rem;
