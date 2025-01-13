@@ -14,15 +14,17 @@ header {
 #nav {
     display: flex;
     align-items: center;
-    background-color:#f7e2b1ea;
+    background-color: #f7e2b1ea;
     justify-content: space-between;
     width: 100%;
     padding: 30px 50px;
     height: 17%;
 }
-.icon{
+
+.icon {
     font-size: medium;
 }
+
 #nav img {
     width: 50%;
 }
@@ -39,9 +41,10 @@ header {
     color: black;
     font-size: 0.8rem;
     letter-spacing: -1px;
-    transition: font-size 0.3s ;
+    transition: font-size 0.3s;
 }
-#nav a:hover{
+
+#nav a:hover {
     font-size: 2vw;
 }
 
@@ -59,13 +62,14 @@ header {
     #nav a {
         font-size: 1.5vw;
     }
+
     #nav i {
         font-size: 1.5vw;
     }
 
 }
 
-#right{
+#right {
     margin-right: 7%;
 }
 
@@ -81,7 +85,7 @@ header {
 
 #right a.login-btn:hover {
     color: black;
-    background-color: #ffffff; 
+    background-color: #ffffff;
 }
 
 
@@ -92,7 +96,7 @@ header {
 
 .homemain {
     width: 100%;
-   
+
 }
 
 .container {
@@ -109,22 +113,35 @@ h1 {
     color: #333;
     gap: 10px;
     font-size: 2.7rem;
-    margin:30px 10px;
+    margin: 30px 10px;
 }
 
 
 
 .event {
-    background-color:  rgba(237, 230, 230, 0.674);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     align-content: left;
     text-align: left;
-    
-   
+    background: linear-gradient(135deg, pink, #acb6e5);
+    box-shadow: 0 8px 15px pink;
+    text-align: center;
+    transition: transform 0.6s, box-shadow 0.3s ease;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    position: relative;
+    min-height: 250px;
+    padding-bottom: 70px;
 }
+
+.event:hover {
+    transform: rotateY(10deg) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
 
 .event-container {
     display: flex;
@@ -160,6 +177,7 @@ h1 {
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
+    margin-left: 650px;
 }
 
 .register-button:hover {

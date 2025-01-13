@@ -7,6 +7,9 @@
     <title>Lumina</title>
     <link rel="icon" type="image/x-icon" href="./image/Lumina.ico">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="testimonial.css">
@@ -50,7 +53,6 @@
                 width: 100%;
                 height: 100%;
                 background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-                -webkit-background-clip: text;
                 color: transparent;
                 opacity: 0;
                 transition: opacity 0.3s ease;
@@ -62,7 +64,7 @@
  
 </head>
 
-<body>
+<body class="container-fluid">
     <div id="main">
         <div id="home">
             <div id="nav">
@@ -80,12 +82,20 @@
                 </div>
             </div>
             <div id="homemain">
-                <h1 class="">Unlock Your Career</h1>
+                
                <div class="headings">
+
+                
+                <h1 class="hvr">
+                    Internships Jobs Mentorship<br>Event
+                  </h1>
+                  
+                  
+                  
                   <h1 class="hvr">Internships</h1>
                   <h1 class="hvr">Jobs</h1>
                   <h1 class="hvr">Mentornships</h1>
-                  <h1 class="hvr">Events</h1>
+                  <h1 class="hvr">Even
                   </div>
 
                 <h1 class="unlock" style="color:rgb(103, 22, 22)">Unlock Your Career</h1>
@@ -103,19 +113,28 @@
             <div id="slides">
                 <div class="slide">
                     <div class="img">
-                        <img src="./image/man-ipad (1).jpg" alt="">
+                        <img src="./image/man-ipad (1).jpg" alt="image1" class="lazy-load">
+                    </div>
+                    <div class="slide-back">
+                        <p style="font-family: Brush Script MT; color:red;"></p>
                     </div>
                     <a href="https://codevita.tcsapps.com/" class="li"><h3 class="tag" >TCS CodeVita Season 12</h3></a>
                 </div>
                 <div class="slide">
                     <div class="img">
-                        <img src="./image/government-jobs.jpg" alt="">
+                        <img src="./image/government-jobs.jpg" alt="image2" class="lazy-load">
+                    </div>
+                    <div class="slide-back">
+                        <p style="font-family: Brush Script MT; color:red;"></p>
                     </div>
                     <a href="https://www.sarkariresult.com/" class="li"><h3 class="tag">Public Sector Opportunities</h3></a>
                 </div>
                 <div class="slide">
                     <div class="img">
-                        <img src="https://d8it4huxumps7.cloudfront.net/uploads/images/opportunity/mobile_banner/66e2746f114f6_infosys-ingenious-grand-finale-2024.webp?d=413x236" alt="">
+                        <img src="https://d8it4huxumps7.cloudfront.net/uploads/images/opportunity/mobile_banner/66e2746f114f6_infosys-ingenious-grand-finale-2024.webp?d=413x236" alt="image3" class="lazy-load">
+                    </div>
+                    <div class="slide-back">
+                        <p style="font-family: Brush Script MT; color:red;"></p>
                     </div>
                     <a class="li" href="https://unstop.com/competitions/infosys-ingenious-the-grand-finale-infosys-1151200?ref=jN7gY0Um"><h3 class="tag">Infosys Ingenious - The Grand Finale</h3></a>
                 </div>
@@ -157,6 +176,7 @@
                 <div id="blur-right"></div>
             </div>
         </div>
+
         <div class="quote">
             <div class="st">
                 <img src="./image/student.webp" alt="">
