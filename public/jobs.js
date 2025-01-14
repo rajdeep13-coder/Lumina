@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Add event listeners to form elements
     form.title.addEventListener('input', filterJobs);
-    form.location.addEventListener('input', filterJobs);
     form.datePosted.addEventListener('change', filterJobs);
     form.salary.addEventListener('change', filterJobs);
     form.jobType.addEventListener('change', filterJobs);
@@ -31,7 +30,6 @@ function selectDropdown(element) {
 function filterJobs() {
     const form = document.getElementById('jobFilterForm');
     const title = form.title.value.trim().toLowerCase();
-    const location = form.location.value.trim().toLowerCase();
     const datePosted = form.datePosted.value.toLowerCase();
     const salary = form.salary.value.toLowerCase();
     const jobType = form.jobType.value.toLowerCase();
@@ -49,7 +47,6 @@ function filterJobs() {
 
     const filteredJobs = jobs.filter(job => 
         job.title.toLowerCase().includes(title) &&
-        (location === '' || job.location.toLowerCase().includes(location)) &&
         filterByDatePosted(job.datePosted, datePosted) &&
         filterBySalary(job.salary, salary) &&
         job.jobType.toLowerCase().includes(jobType) &&
@@ -132,7 +129,6 @@ function displayFilteredJobs(jobs) {
                 </div>
             </div>
             <h3 class="job-title">${job.title}</h3>
-            <p class="location"><i class="fas fa-map-marker-alt"></i> <span>${job.location}</span></p>
             <div class="tags">
                 <p><i class="fas fa-indian-rupee-sign"></i> <span>${job.salary}</span></p>
                 <p><i class="fas fa-briefcase"></i> <span>${job.jobType}</span></p>
@@ -146,20 +142,20 @@ function displayFilteredJobs(jobs) {
         `;
         jobContainer.appendChild(jobBox);
     });
-    
- // Add event listeners to the new View details buttons after they are created
-document.querySelectorAll('.btn').forEach(button => {
-    button.addEventListener('click', handleButtonClick);
-});
 
-function handleButtonClick(event) {
-    event.preventDefault(); // Prevent default action
-    const button = event.currentTarget;
-    const href = button.getAttribute('href');
-    if (href && href !== '#') {
-        window.location.href = href;
-    } else {
-        alert('Invalid URL!');
+    // Add event listeners to the new View details buttons after they are created
+    document.querySelectorAll('.btn').forEach(button => {
+        button.addEventListener('click', handleButtonClick);
+    });
+
+    function handleButtonClick(event) {
+        event.preventDefault(); // Prevent default action
+        const button = event.currentTarget;
+        const href = button.getAttribute('href');
+        if (href && href !== '#') {
+            window.location.href = href;
+        } else {
+            alert('Invalid URL!');
+        }
     }
-}
 }
