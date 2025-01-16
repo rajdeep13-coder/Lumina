@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post an Internship</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #FDEBFF, #FFF6E0);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background:  rgb(247, 247, 178);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #4A148C;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #4A148C;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border: 1px solid #4A148C;
+            box-shadow: 0 0 5px rgba(74, 20, 140, 0.5);
+        }
+        button {
+            background: #4A148C;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #6A1B9A;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Post an Internship</h1>
+        <form>
+            <label for="title">Internship Title</label>
+            <input type="text" id="title" placeholder="e.g., Marketing Intern" required>
+
+            <label for="company">Company Name</label>
+            <input type="text" id="company" placeholder="e.g., Market Pro" required>
+
+            <label for="location">Location</label>
+            <input type="text" id="location" placeholder="e.g., Remote or City Name">
+
+            <label for="eligibility">Eligibility</label>
+            <textarea id="eligibility" rows="4" placeholder="List the eligibility criteria here"></textarea>
+
+            <label for="description">Internship Description</label>
+            <textarea id="description" rows="6" placeholder="Describe the internship details"></textarea>
+
+            <button type="submit">Submit Internship</button>
+        </form>
+    </div>
+</body>
+</html>
