@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Job</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #FFE4B5, #FFDEDE);
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: rgb(247, 247, 178);
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            padding: 20px 30px;
+        }
+        h1 {
+            text-align: center;
+            color: #D2691E;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #8B4513;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 2px solid #FFDAB9;
+            border-radius: 8px;
+            font-size: 16px;
+            background: #FFF8DC;
+            transition: 0.3s;
+        }
+        input:focus, textarea:focus, select:focus {
+            border-color: #D2691E;
+            box-shadow: 0 0 8px rgba(210, 105, 30, 0.5);
+            outline: none;
+        }
+        button {
+            width: 100%;
+            background: #D2691E;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #FF8C00;
+            box-shadow: 0 4px 12px rgba(255, 140, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Post a Job</h1>
+        <form>
+            <label for="job-title">Job Title</label>
+            <input type="text" id="job-title" placeholder="e.g., Frontend Developer" required>
+
+            <label for="company-name">Company Name</label>
+            <input type="text" id="company-name" placeholder="e.g., Tech Solutions Ltd." required>
+
+            <label for="job-location">Job Location</label>
+            <input type="text" id="job-location" placeholder="e.g., Remote, New York" required>
+
+            <label for="salary-range">Salary Range</label>
+            <input type="text" id="salary-range" placeholder="e.g., $40,000 - $60,000/year">
+
+            <label for="job-type">Job Type</label>
+            <select id="job-type">
+                <option value="full-time">Full-Time</option>
+                <option value="part-time">Part-Time</option>
+                <option value="freelance">Freelance</option>
+                <option value="contract">Contract</option>
+            </select>
+
+            <label for="job-description">Job Description</label>
+            <textarea id="job-description" rows="5" placeholder="Provide a detailed description of the job, including responsibilities, qualifications, etc." required></textarea>
+
+            <button type="submit">Post Job</button>
+        </form>
+    </div>
+</body>
+</html>

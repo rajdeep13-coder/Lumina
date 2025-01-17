@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event/Webinar</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #E0F7FA, #FFF6E0);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: rgb(247, 247, 178);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #00695C;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #00695C;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border: 1px solid #00695C;
+            box-shadow: 0 0 5px rgba(0, 105, 92, 0.5);
+        }
+        button {
+            background: #00695C;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #00796B;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Add Event/Webinar</h1>
+        <form>
+            <label for="event-title">Event Title</label>
+            <input type="text" id="event-title" placeholder="e.g., JavaScript Workshop" required>
+
+            <label for="date">Date</label>
+            <input type="date" id="date" required>
+
+            <label for="time">Time</label>
+            <input type="time" id="time" required>
+
+            <label for="location">Location</label>
+            <input type="text" id="location" placeholder="e.g., Remote or Physical Address">
+
+            <label for="eligibility">Eligibility</label>
+            <textarea id="eligibility" rows="4" placeholder="List the eligibility criteria here"></textarea>
+
+            <label for="description">Event Description</label>
+            <textarea id="description" rows="6" placeholder="Describe the event details"></textarea>
+
+            <button type="submit">Submit Event</button>
+        </form>
+    </div>
+</body>
+</html>
