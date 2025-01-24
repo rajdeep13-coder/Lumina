@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
 
 
 <head>
@@ -37,79 +38,7 @@
       <a href="login.html" class="login-btn magnet">Login</a>
     </div>
   </div>
-  <div class="container">
-    <h1 class="li">Search for a job</h1>
-    <div class="search-bar">
-      <input type="text" id="jobTitle" placeholder="Job Title" />
-      <select id="jobType">
-        <option value="">Job Type</option>
-        <option value="Fulltime">Fulltime</option>
-        <option value="Part-time">Part-time</option>
-      </select>
-      <select id="jobLocation">
-        <option value="">Location</option>
-        <option value="San Francisco">San Francisco</option>
-        <option value="Remote">Remote</option>
-      </select>
-      <button id="searchButton">Search</button>
-    </div>
-
-    <h2>Featured Jobs</h2>
-    <div class="job-card" data-job-title="Senior Software Engineer" data-job-type="Fulltime"
-      data-job-location="San Francisco">
-      <div class="job-details">
-        <div>
-          <h3>Senior Software Engineer</h3>
-          <div class="tags">
-            <div class="tag">Fulltime</div>
-            <div class="tag">Engineering</div>
-            <div class="tag">San Francisco</div>
-          </div>
-          <div class="salary">$60K-100K / Year</div>
-        </div>
-        <a href="Apply.html"><button class="apply-button">Apply Now</button></a>
-      </div>
-    </div>
-
-    <div class="job-card" data-job-title="Junior UI/UX Designer" data-job-type="Part-time" data-job-location="Remote">
-      <div class="job-details">
-        <div>
-          <h3>Junior UI/UX Designer</h3>
-          <div class="tags">
-            <div class="tag">Parttime</div>
-            <div class="tag">Design</div>
-            <div class="tag">Remote</div>
-          </div>
-          <div class="salary">$30K-60K / Year</div>
-        </div>
-        <a href="Apply.html"><button class="apply-button">Apply Now</button></a>
-      </div>
-    </div>
-  </div>
-
-  <div class="post-job-container">
-    <a href="PostJob.html"><button class="post-job-button">
-      <i class="fas fa-briefcase"></i> Post a Job
-    </button>
-    </a>
-    <div class="quote">"Find the perfect candidate to grow your team!"</div>
-
-    <link rel="stylesheet" href="jobs.css" />
-  </head>
-  <body>
-    <div id="nav">
-      <a href="index.html"
-        ><img class="icon magnet" src="./image/lumina1.png" alt=""
-      /></a>
-      <div id="right">
-        <a href="jobs.html">Jobs</a>
-        <a href="internships.html">Internships</a>
-        <a href="mentorship.html">Mentorships</a>
-        <a href="resources.html">Resources</a>
-        <a href="events&webinar.html">Events</a>
-        <a href="login.html" class="login-btn magnet">Login</a>
-      </div>
-    </div>
+  
      <!-- job filter section starts -->
     
          <section class="job-filter">
@@ -117,13 +46,13 @@
              <form id="jobFilterForm" onsubmit="return filterJobs()">
                  <div class="flex">
                      <div class="box">
-                         <p>job title <span>*</span></p>
-                         <input type="text" name="title" placeholder="keyword, category or company" required maxlength="20" class="input">
+                         <p>job title</p>
+                         <input type="text" name="title" placeholder="keyword, category or company"  maxlength="20" class="input">
                      </div>
-                     <div class="box">
+                     <!-- <div class="box">
                          <p>job location</p>
-                         <input type="text" name="location" placeholder="city, state or country" required maxlength="50" class="input">
-                     </div>
+                         <input type="text" name="location" placeholder="city, state or country" maxlength="50" class="input">
+                     </div> -->
                  </div>
                  <div class="dropdown-container">
                      <div class="dropdown">
@@ -189,49 +118,12 @@
                          </div>
                      </div>
                  </div>
-                 <button type="submit" class="btn">Apply Filter</button>
+                 <button type="submit" class="applybtn">Apply Filter</button>
+               
              </form>
          </section>
      
-         <script>
-            function selectDropdown(element) {
-                let input = element.parentElement.previousElementSibling;
-                input.value = element.innerText;
-            }
-        
-            function filterJobs() {
-                const form = document.getElementById('jobFilterForm');
-                const title = form.title.value.trim().toLowerCase();
-                const location = form.location.value.trim().toLowerCase();
-                const datePosted = form.datePosted.value.toLowerCase();
-                const salary = form.salary.value.toLowerCase();
-                const jobType = form.jobType.value.toLowerCase();
-                const education = form.education.value.toLowerCase();
-                const shift = form.shift.value.toLowerCase();
-        
-                // Example job list (this would be dynamically generated in a real application)
-                const jobs = [
-                    {title: 'Senior Web Developer', location: ' ', datePosted: ' ', salary: '10k - 25k', jobType: 'part-time', education: '', shift: 'day shift'},
-                    {title: 'Qualified Developer', location: 'mumbai, india', datePosted: '2 days ago', salary: '9000', jobType: 'full-time', education: '', shift: 'flexible shift'},
-                    {title: 'Javascript Developer', location: 'mumbai, india', datePosted: 'posted today', salary: '10k - 25k', jobType: 'internship', education: '', shift: 'night shift'},
-                    {title: 'Junior Front-End', location: 'mumbai, india', datePosted: '19 days ago', salary: '20k - 50k', jobType: 'contract', education: '', shift: 'fixed shift'},
-                    {title: 'Junior Assistant', location: 'mumbai, india', datePosted: '2 days ago', salary: '5000', jobType: 'temporary', education: '', shift: 'flexible shift'},
-                    {title: 'PHP Developer', location: 'mumbai, india', datePosted: '2 days ago', salary: '30k - 1 lakh', jobType: 'fresher', education: '', shift: 'day shift'}
-                ];
-        
-                const filteredJobs = jobs.filter(job => 
-                    job.title.toLowerCase().includes(title) &&
-                    job.location.toLowerCase().includes(location) &&
-                    job.datePosted.toLowerCase().includes(datePosted) &&
-                    job.salary.toLowerCase().includes(salary) &&
-                    job.jobType.toLowerCase().includes(jobType) &&
-                    job.education.toLowerCase().includes(education) &&
-                    job.shift.toLowerCase().includes(shift)
-                );
-        
-                console.log(filteredJobs);
-            }
-        </script>
+       
         
        <!-- job filter section ends -->
  <!-- all jobs section starts -->
@@ -249,7 +141,7 @@
              <h3 class="job-title">Senior Web Developer</h3>
              <p class="location"><i class="fas fa-map-marker-alt"></i> <span>Mumbai, India</span></p>
              <div class="tags">
-                 <p><i class="fas fa-indian-rupee-sign"></i> <span>10k - 25k</span></p>
+                 <p><i class="fas fa-indian-rupee-sign"></i> <span>10k - 20k</span></p>
                  <p><i class="fas fa-briefcase"></i> <span>Part-time</span></p>
                  <p><i class="fas fa-clock"></i> <span>Day shift</span></p>
              </div>
@@ -289,7 +181,7 @@
          <h3 class="job-title">Javascript Developer</h3>
          <p class="location"><i class="fas fa-map-marker-alt"></i> <span>Mumbai, India</span></p>
          <div class="tags">
-             <p><i class="fas fa-indian-rupee-sign"></i> <span>10k - 25k</span></p>
+             <p><i class="fas fa-indian-rupee-sign"></i> <span>10k - 20k</span></p>
              <p><i class="fas fa-briefcase"></i> <span>internship</span></p>
              <p><i class="fas fa-clock"></i> <span>night shift</span></p>
          </div>
@@ -309,7 +201,7 @@
        <h3 class="job-title">Junior Front-End</h3>
        <p class="location"><i class="fas fa-map-marker-alt"></i> <span>Mumbai, India</span></p>
        <div class="tags">
-           <p><i class="fas fa-indian-rupee-sign"></i> <span>20k - 50k</span></p>
+           <p><i class="fas fa-indian-rupee-sign"></i> <span>40k - 50k</span></p>
            <p><i class="fas fa-briefcase"></i> <span>contract</span></p>
            <p><i class="fas fa-clock"></i> <span>fixed shift</span></p>
        </div>
@@ -349,7 +241,7 @@
    <h3 class="job-title">PHP Developer</h3>
    <p class="location"><i class="fas fa-map-marker-alt"></i> <span>Mumbai, India</span></p>
    <div class="tags">
-       <p><i class="fas fa-indian-rupee-sign"></i> <span>30k - 1lakh</span></p>
+       <p><i class="fas fa-indian-rupee-sign"></i> <span>50k - 1lakh</span></p>
        <p><i class="fas fa-briefcase"></i> <span>fresher</span></p>
        <p><i class="fas fa-clock"></i> <span>Day shift</span></p>
    </div>
@@ -421,5 +313,7 @@
 
 
     <script src="//code.tidio.co/jrwlyr4jlffbfwi1ogzqdzvxf34j4txb.js" async></script>
+    <script src="jobs.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
