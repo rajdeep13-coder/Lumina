@@ -125,7 +125,7 @@ body {
 }
 
 #homemain h1 {
- 
+
     font-weight: 500;
     letter-spacing: -.1vw;
     font-size: 1.34vw;
@@ -194,11 +194,11 @@ body {
 
     display: flex;
     gap: 1.5vw;
-    display: flex ;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 1.5vw; 
+    gap: 1.5vw;
 
 }
 
@@ -330,7 +330,7 @@ body {
     width: 100%;
     padding: 5vw 10vw;
     padding: 5vw 10vw 0;
-}   
+}
 
 #dev h1 {
     color: transparent;
@@ -353,8 +353,8 @@ body {
     width: 60%;
     color: rgb(52, 32, 32);
     width: 100%;
-    color:rgb(52, 32, 32);
-    
+    color: rgb(52, 32, 32);
+
 }
 
 #slides {
@@ -530,23 +530,23 @@ body {
 
 }
 
-.faq-text{
+.faq-text {
     text-align: center;
-        width: 98vw;
-        color: transparent;
-        -webkit-text-stroke: 1px #000;
-        font-size: 3.8vw;
-        font-weight: 900;
-        line-height: 1;
-        letter-spacing: -3px;
-        margin-top: 3vw;
-        margin-bottom:2vw;
-    }
-    
-    .faq-text:hover {
-        color: #000;
-    
-    }
+    width: 98vw;
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
+    font-size: 3.8vw;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -3px;
+    margin-top: 3vw;
+    margin-bottom: 2vw;
+}
+
+.faq-text:hover {
+    color: #000;
+
+}
 
 
 .faq-section {
@@ -703,7 +703,7 @@ body {
     font-size: 1rem;
 }
 
-.footer p{
+.footer p {
     width: 50%;
     margin: 1rem auto;
 }
@@ -764,4 +764,19 @@ body {
     display: inline-block;
     width: calc(33.333% - 20px);
     margin-right: 10px;
+}
+
+#goto-top-btn {
+    background-color: white;
+    padding: 15px 19px;
+    border: none;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 118px;
+    right: 30px;
+    display: none;
+}
+
+#goto-top-btn:hover {
+    background-color: #bdbaba;
 }
