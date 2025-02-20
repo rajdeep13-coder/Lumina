@@ -31,17 +31,21 @@
         }
         .login-btn {
             background-color: black;
-            color: white;
+            color: white !important; /* Ensures solid white text */
             padding: 10px 20px;
             border-radius: 20px;
             font-weight: bold;
-            transition: background 0.3s ease-in-out;
+            border: 2px solid white; /* White border for visibility */
+            text-align: center;
+            display: inline-block; /* Ensures proper visibility */
+            transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
         }
         .login-btn:hover {
             background-color: #333;
+            color: white !important; /* Keeps text white even on hover */
         }
         .logo {
-            font-family: 'YourFontChoice', sans-serif;
+            font-family: 'Arial', sans-serif;
             font-size: 24px;
             font-weight: bold;
         }
@@ -88,7 +92,9 @@
 
 <body>
     <div class="navbar">
-        <a href="index.html"><img class="icon magnet" src="\public\image\image_lumina1.jpg" alt=""></a>
+        <a href="index.html">
+            <img class="icon magnet" src="/public/image/image_lumina1.jpg" alt="Logo">
+        </a>
         <div>
             <a href="#">Jobs</a>
             <a href="#">Internships</a>
